@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.weatherDetails.WeatherDetailsFragment">
+
+    <TextView
+        android:id="@+id/tv_city_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Minsk" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_city_name"
+        tools:text="18.02.2024" />
+
+    <ImageView
+        android:id="@+id/img_weather"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+    <ImageView
+        android:id="@+id/imageViewDay"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/ic_day"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_weather" />
+
+    <TextView
+        android:id="@+id/tv_temp_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewDay"
+        app:layout_constraintStart_toEndOf="@+id/imageViewDay"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDay"
+        tools:text="7" />
+
+    <TextView
+        android:id="@+id/tv_feels_like_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/feels_like_tittle"
+        app:layout_constraintEnd_toStartOf="@+id/tv_temp_night"
+        app:layout_constraintStart_toEndOf="@+id/tv_temp_day"
+        app:layout_constraintTop_toBottomOf="@+id/img_weather" />
+
+    <TextView
+        android:id="@+id/tv_feels_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_temp_night"
+        app:layout_constraintStart_toEndOf="@+id/tv_temp_day"
+        app:layout_constraintTop_toBottomOf="@+id/tv_feels_like_title"
+        tools:text="5" />
+
+
+    <ImageView
+        android:id="@+id/imageViewNight"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_night"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_weather" />
+
+    <TextView
+        android:id="@+id/tv_temp_night"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewNight"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewNight"
+        app:layout_constraintTop_toTopOf="@+id/imageViewNight"
+        tools:text="2" />
+
+
+    <ImageView
+        android:id="@+id/imageViewSR"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/ic_sunrise"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_temp_day" />
+
+    <TextView
+        android:id="@+id/tv_sunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewSR"
+        app:layout_constraintStart_toEndOf="@+id/imageViewSR"
+        app:layout_constraintTop_toTopOf="@+id/imageViewSR"
+        tools:text="10AM" />
+
+    <ImageView
+        android:id="@+id/imageViewSS"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_sunrise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_temp_day" />
+
+    <TextView
+        android:id="@+id/tv_sunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewSS"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewSS"
+        app:layout_constraintTop_toTopOf="@+id/imageViewSS"
+        tools:text="10AM" />
+
+
+    <ImageView
+        android:id="@+id/imageViewH"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/ic_humidity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSR" />
+
+    <TextView
+        android:id="@+id/tv_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewH"
+        app:layout_constraintStart_toEndOf="@+id/imageViewH"
+        app:layout_constraintTop_toTopOf="@+id/imageViewH"
+        tools:text="10%" />
+
+    <ImageView
+        android:id="@+id/imageViewP"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/ic_barometer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewH" />
+
+    <TextView
+        android:id="@+id/tv_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewP"
+        app:layout_constraintStart_toEndOf="@+id/imageViewP"
+        app:layout_constraintTop_toTopOf="@+id/imageViewP"
+        tools:text="10%" />
+
+    <ImageView
+        android:id="@+id/imageViewUV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_wind"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSS" />
+
+    <TextView
+        android:id="@+id/tv_uv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewUV"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewUV"
+        app:layout_constraintTop_toTopOf="@+id/imageViewUV"
+        tools:text="10AM" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

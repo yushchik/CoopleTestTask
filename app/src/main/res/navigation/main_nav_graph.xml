@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_host"
+    app:startDestination="@id/searchCityFragment">
+
+    <fragment
+        android:id="@+id/searchCityFragment"
+        android:name="com.example.coopletesttask.presentation.searchCity.SearchCityFragment"
+        android:label="Search City Fragment" />
+
+    <fragment
+        android:id="@+id/weatherForecastFragment"
+        android:name="com.example.coopletesttask.presentation.weatherForecast.WeatherForecastFragment"
+        android:label="Weather Forecast Fragment" />
+
+    <fragment
+        android:id="@+id/weatherDetailsFragment"
+        android:name="com.example.coopletesttask.presentation.weatherDetails.WeatherDetailsFragment"
+        android:label="Weather Details Fragment" />
+</navigation>

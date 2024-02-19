@@ -1,0 +1,97 @@
+[versions]
+constraintlayout = "2.1.4"
+gradleplugin = "8.2.1"
+kotlin = "1.9.10"
+devtools = "1.9.21-1.0.15"
+material = "1.11.0"
+serialization = "1.7.0"
+androidxCore = "1.12.0"
+androidxAppcompat = "1.6.1"
+lifecycle = "2.7.0"
+startup = "1.1.1"
+androidxMaterial = "1.11.0"
+junit = "4.13.2"
+assert = "3.24.2"
+mockk = "1.13.8"
+testCoroutines = "1.7.3"
+androidJunit = "1.1.5"
+espresso = "3.5.1"
+navigation = "2.7.7"
+koin = "3.5.0"
+viewbinding = "1.5.9"
+picasso = "2.71828"
+ktorfit = "1.7.0"
+ktorfitPlugin = "1.0.0"
+ktor = "2.3.4"
+room = "2.6.1"
+timber = "5.0.1"
+
+org-jetbrains-kotlin-jvm = "1.9.10"
+
+[libraries]
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+core = { module ="androidx.core:core-ktx", version.ref = "androidxCore" }
+appcompat = { module ="androidx.appcompat:appcompat", version.ref = "androidxAppcompat" }
+lifecycle = { module ="androidx.lifecycle:lifecycle-process", version.ref = "lifecycle" }
+material-v1110 = { module = "com.google.android.material:material", version.ref = "material" }
+startup = { module ="androidx.startup:startup-runtime", version.ref = "startup" }
+material = { module ="com.google.android.material:material", version.ref = "androidxMaterial" }
+junit = { module ="junit:junit", version.ref = "junit" }
+assert = { module ="org.assertj:assertj-core", version.ref = "assert" }
+mockk = { module ="io.mockk:mockk", version.ref = "mockk" }
+testCoroutines = { module ="org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "testCoroutines" }
+androidJunit = { module ="androidx.test.ext:junit", version.ref = "androidJunit" }
+espresso = { module ="androidx.test.espresso:espresso-core", version.ref = "espresso" }
+
+
+# navigation
+navFragment = { module ="androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+navUI = { module ="androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+
+# di
+koin = { module ="io.insert-koin:koin-android", version.ref = "koin" }
+koinWorker = { module ="io.insert-koin:koin-androidx-workmanager", version.ref = "koin" }
+
+
+# ui
+viewbinding = { module ="com.github.kirich1409:viewbindingpropertydelegate", version.ref = "viewbinding" }
+picasso = { module ="com.squareup.picasso:picasso", version.ref = "picasso" }
+
+
+# networking
+ktorfitKsp = { module ="de.jensklingenberg.ktorfit:ktorfit-ksp", version.ref = "ktorfit" }
+ktorfit = { module ="de.jensklingenberg.ktorfit:ktorfit-lib", version.ref = "ktorfit" }
+ktorContentNegotiation = { module ="io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktorAndroidClient = { module ="io.ktor:ktor-client-android", version.ref = "ktor" }
+ktorClientLogging = { module ="io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktorGson = { module ="io.ktor:ktor-serialization-gson", version.ref = "ktor" }
+
+
+# storage
+room = { module ="androidx.room:room-runtime", version.ref = "room" }
+roomCoroutines = { module ="androidx.room:room-ktx", version.ref = "room" }
+roomKsp = { module ="androidx.room:room-compiler", version.ref = "room" }
+roomAnnotations = { module ="androidx.room:room-compiler", version.ref = "room" }
+
+# logging
+timber = { module ="com.jakewharton.timber:timber", version.ref = "timber" }
+
+
+[bundles]
+android = ["core", "appcompat", "lifecycle", "material", "startup"]
+di = ["koin", "koinWorker"]
+ktor = ["ktorfit", "ktorContentNegotiation", "ktorAndroidClient", "ktorClientLogging", "ktorGson"]
+navigation = ["navFragment", "navUI"]
+unitTests = ["junit", "assert", "mockk", "testCoroutines"]
+uiTests = ["androidJunit", "espresso"]
+room = ["room", "roomCoroutines"]
+logging = ["timber"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "gradleplugin" }
+android-library = { id = "com.android.library", version.ref = "gradleplugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+devtools = { id = "com.google.devtools.ksp", version.ref = "devtools" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization" }
+ktorfitPlugin = { id = "de.jensklingenberg.ktorfit", version.ref = "ktorfitPlugin" }
+org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }

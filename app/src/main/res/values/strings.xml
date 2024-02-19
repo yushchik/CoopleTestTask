@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CoopleTestTask</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_city_hint">Enter City</string>
+    <string name="search_city_empty_list">You currently have no search history.\n Please enter the name of the city.</string>
+    <string name="search_city_error">City not found. Please try again.</string>
+    <string name="feels_like_tittle">Feels like</string>
+</resources>
